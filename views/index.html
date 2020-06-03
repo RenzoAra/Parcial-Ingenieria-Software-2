@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="../img/calculator_icon-icons.com_72046.ico">
+    <title>Calculadora Infinita</title>
+  </head>
+  <body>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+        *{
+            padding : 0px;
+            margin : 0px;
+            font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        }
+    </style>
+  <div class="container p-2 col-xs col-sm col-md">
+      <center>
+          <h1>
+              Infinite Calculator
+          </h1>
+          <br>
+          <div class="col p-1 col-xs col-sm col-md-5 bg-secondary">
+            <div class="col p-1 col-xs col-sm col-md bg-light">
+                <br>
+                <div id="resultado" class="col-xs col-sm col-md col-form-label bg-white">${salida}</div>
+                <br>
+            </div>
+            <br>
+            <br>
+            <div id="botones" class="btn-group-lg" role="group" aria-label="Basic example">
+                <button id="n7" type="button" class="btn btn-light">7</button>
+                  <button id="n8" type="button" class="btn btn-light">8</button>
+                  <button id="n9" type="button" class="btn btn-light">9</button>
+                  <button id="borrar" type="button" class="btn btn-danger">Borrar</button>
+                  <br>
+                  <br>
+                  <button id="n4" type="button" class="btn btn-light">4</button>
+                  <button id="n5" type="button" class="btn btn-light">5</button>
+                  <button id="n6" type="button" class="btn btn-light">6</button>
+                  <button id="m" type="button" class="btn btn-info">x</button>
+                  <button id="d" type="button" class="btn btn-info">÷</button>
+                  <br>
+                  <br>
+                  <button id="n1" type="button" class="btn btn-light">1</button>
+                  <button id="n2" type="button" class="btn btn-light">2</button>
+                  <button id="n3" type="button" class="btn btn-light">3</button>
+                  <button id="s" type="button" class="btn btn-info">+</button>
+                  <button id="r" type="button" class="btn btn-info">-</button>
+                  <br>
+                  <br>
+                  <button id="n0" type="button-lg" class="btn btn-light">0</button>
+          </div>
+                <br>
+                      <br>
+                      <br>
+                      <Form action = "/" method = "post">
+                      <div class="input-group mb-3 col-xs col-sm col-md">
+                        <div class="input-group-prepend">
+                          <Label class="input-group-text" id="comandoL">Ingresar Comando:</Label>
+                        </div>
+                        <Input name="textbox" id="comandos" class="form-control" aria-label="Ingresar Comando:" aria-describedby="inputGroup-sizing-default" type="text">
+                        <button id="enviar" type="submit" class="btn btn-success">Enviar</button>
+                      </div>
+                      </Form>
+                      <div id="error" class="col-xs col-sm col-md col-form-label bg-secondary text-danger">${salida2}</div>
+          </div>
+        </center>
+          <br>
+          <br>
+          <p>
+              Creado por: Machuanin, Elias - Aranda, Ranzo.
+          </p>
+          <br>
+          <br>
+    <!-- Optional JavaScript -->
+    <script>
+      document.getElementById("n1").addEventListener("click", n1);
+      document.getElementById("n2").addEventListener("click", n2);
+      document.getElementById("n3").addEventListener("click", n3);
+      document.getElementById("n4").addEventListener("click", n4);
+      document.getElementById("n5").addEventListener("click", n5);
+      document.getElementById("n6").addEventListener("click", n6);
+      document.getElementById("n7").addEventListener("click", n7);
+      document.getElementById("n8").addEventListener("click", n8);
+      document.getElementById("n9").addEventListener("click", n9);
+      document.getElementById("n0").addEventListener("click", n0);
+      document.getElementById("s").addEventListener("click", o1);
+      document.getElementById("r").addEventListener("click", o2);
+      document.getElementById("d").addEventListener("click", o3);
+      document.getElementById("m").addEventListener("click", o4);
+      document.getElementById("borrar").addEventListener("click", o5);
+
+      function n1() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("uno"); 
+      }
+      function n2() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("dos"); 
+      }
+      function n3() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("tres"); 
+      }
+      function n4() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("cuatro"); 
+      }
+      function n5() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("cinco"); 
+      }
+      function n6() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("seis"); 
+      }
+      function n7() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("siete"); 
+      }
+      function n8() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("ocho"); 
+      }
+      function n9() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("nueve"); 
+      }
+      function n0() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("cero"); 
+      }
+      function o1() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("sumar"); 
+      }
+      function o2() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("restar"); 
+      }
+      function o3() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("dividir"); 
+      }
+      function o4() {
+          document.getElementById('comandos');
+          comandos.value = comandos.value.concat("multiplicar"); 
+      }
+      function o5() {
+          document.getElementById('comandos');
+          comandos.value = ""; 
+      }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
